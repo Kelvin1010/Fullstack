@@ -1,0 +1,47 @@
+.newuser{
+    flex: 4;
+}
+.newuserTitle{
+
+}
+.newuserForm{
+    -webkit-box-shadow: -1px 0px 16px 4px #000000 !important; 
+    box-shadow: -1px 0px 16px 4px #000000 !important;
+    padding: 20px;
+    margin: 10px;
+}
+.newuserItem{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.newuserItem label{
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 30%;
+    color: gray;
+    font-weight: 400;
+}
+
+.newuserItem input{
+    height: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+}
+.newUserSelect{
+    width: 100px;
+}
+.newUserButton{
+    border: none;
+    width: 200px;
+    background-color: darkblue;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}

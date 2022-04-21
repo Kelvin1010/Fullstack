@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { useSelector } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Login from './pages/login/Login';
+import DefaultLayout from './route/DefaultLayout';
 
 function App() {
+
+  const admin = useSelector((state) => state.user.currentUser.isAdmin);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+          <Routes>
+             { admin && (<Route path='/*' element={ <DefaultLayout /> } />)}
+              <Route path='/login' element={ <Login /> } />
+          </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
